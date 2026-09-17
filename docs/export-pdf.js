@@ -24,6 +24,25 @@ root.buildTourPDF=async function(data,logoBytes){
  for(const t of wrap(data.tour,CW,34,bold)){text(t,L,y,34,bold);y+=39;}y+=6;
  para('Meta: '+data.dateRange+' | '+data.campaigns.length+' matched campaigns | Currency: AUD',8);
  para('Meta refreshed: '+data.refreshed+' | Audience Republic imported: '+data.imported,8);y+=18;
+
+ if(data.summary && data.summary.trim()){
+  ensure(50);
+  text('CAMPAIGN SUMMARY',L,y,8,bold,red);y+=14;
+  const paragraphs=data.summary.trim().split('\n');
+  for(const p of paragraphs){
+   if(p.trim()){
+    const lines=wrap(p.trim(),CW,9,regular);
+    for(const lineText of lines){
+     ensure(14);
+     text(lineText,L,y,9,regular,ink);
+     y+=13;
+    }
+    y+=4;
+   }
+  }
+  y+=10;
+ }
+
  const spend=sum(data.campaigns,'spend'),value=sum(data.campaigns,'revenue');
  ensure(110);const widths=[215,150,CW-365],metrics=[['PURCHASE VALUE',data.metaOK?cash(value):'-','Meta-attributed revenue'],['TOTAL AD SPEND',data.metaOK?cash(spend):'-','All matched objectives'],['BLENDED ROAS',data.metaOK?ratio(value,spend):'-','Value / total ad spend']];let mx=L;
  metrics.forEach((m,i)=>{rect(mx,y,widths[i],98,i===0?ink:pale);rect(mx,y,widths[i],3,red);text(m[0],mx+14,y+17,8,bold,i===0?white:gray);let size=i===0?29:24;while(bold.widthOfTextAtSize(m[1],size)>widths[i]-28)size--;text(m[1],mx+14,y+36,size,bold,i===0?white:ink);text(m[2],mx+14,y+77,7,regular,i===0?white:gray);mx+=widths[i];});y+=114;
