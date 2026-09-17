@@ -16,15 +16,30 @@ const body = await response.json();
 if (!response.ok) throw new Error(body.error?.message || "Meta request failed");
 
 const valueFor = (items, types) => Number(items?.filter((item) => types.some((type) => item.action_type.toLowerCase().includes(type))).reduce((sum, item) => sum + Number(item.value || 0), 0) || 0);
-const purchaseTypes = ["offsite_conversion.fb_pixel_purchase", "omni_purchase", "purchase"];
+
+// Meta may return the same purchase under multiple overlapping action types
+// (for example omni_purchase and offsite_conversion.fb_pixel_purchase).
+// Choose one canonical value by priority; never sum them.
+const firstExactMetric = (items, types) => {
+  const normalised = new Map((items || []).map((item) => [String(item.action_type || "").toLowerCase(), Number(item.value || 0)]));
+  for (const type of types) {
+    if (normalised.has(type)) return { type, value: normalised.get(type) };
+  }
+  return { type: null, value: 0 };
+};
+const purchaseTypes = ["omni_purchase", "offsite_conversion.fb_pixel_purchase", "onsite_conversion.purchase", "purchase"];
 const campaigns = (body.data || []).map((row) => {
   const name = row.campaign_name;
   const lower = name.toLowerCase();
   const kind = /event\s*(response|resp)|eventresp|event_resp/.test(lower) ? "event" : /post\s*eng|post_eng|engagement/.test(lower) ? "engagement" : "conversion";
+  const purchaseCount = firstExactMetric(row.actions, purchaseTypes);
+  const purchaseValue = firstExactMetric(row.action_values, purchaseTypes);
   return {
     id: row.campaign_id, name, kind,
     spend: Number(row.spend || 0), impressions: Number(row.impressions || 0), reach: Number(row.reach || 0), clicks: Number(row.clicks || 0),
-    purchases: valueFor(row.actions, purchaseTypes), revenue: valueFor(row.action_values, purchaseTypes),
+    // Exactly one metric per field. Do not add the overlapping purchase types.
+    purchases: purchaseCount.value, revenue: purchaseValue.value,
+    purchaseMetric: purchaseValue.type || purchaseCount.type,
     eventResponses: valueFor(row.actions, ["event_response", "event response", "rsvp"]),
     interactions: valueFor(row.actions, ["post_engagement", "post engagement", "page_engagement"]),
   };
