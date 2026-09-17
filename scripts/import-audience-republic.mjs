@@ -4,12 +4,12 @@ const source = process.argv[2];
 if (!source) throw new Error("Pass the Audience Republic CSV path as the first argument.");
 
 const tours = [
-  ["MKTO", ["mkto"]], ["Brother Ali", ["brother ali"]], ["Dan Does Footy", ["dan does footy", "ddf"]],
-  ["28 Days", ["28 days"]], ["VSPY VSPY", ["vspy"]], ["SOULWAVE", ["soulwave"]],
+  ["MKTO", ["mkto"]], ["Brother Ali", ["brother ali", "horrorshow/brother ali"]], ["Dan Does Footy", ["dan does footy", "ddf"]],
+  ["28 Days", ["28 days", "28dayspt2"]], ["VSPY VSPY", ["vspy"]], ["SOULWAVE", ["soulwave"]],
   ["You Am I", ["you am i", "yai"]], ["harrykirby", ["harrykirby", "harry kirby"]],
-  ["Less Than Jake", ["less than jake", "ltj", "circus down under"]], ["Talib Kweli", ["talib kweli"]],
+  ["Less Than Jake", ["less than jake", "ltj", "circus down under"]], ["Talib Kweli", ["talib kweli", "talib"]],
   ["The Black Seeds", ["the black seeds", "black seeds"]], ["Eric Hutchinson", ["eric hutchinson", "eric hutch"]],
-  ["Shapeshifter", ["shapeshifter"]], ["Good Things Festival", ["good things"]], ["Clutch", ["clutch"]], ["Will Sparks", ["will sparks", "classics"]],
+  ["Shapeshifter", ["shapeshifter"]], ["Good Things Festival", ["good things"]], ["Clutch", ["clutch"]], ["Will Sparks", ["will sparks", "classics", "will2027"]],
 ];
 
 function parseCsv(text) {

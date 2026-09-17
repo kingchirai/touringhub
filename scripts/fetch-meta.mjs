@@ -15,18 +15,20 @@ const response = await fetch(url);
 const body = await response.json();
 if (!response.ok) throw new Error(body.error?.message || "Meta request failed");
 
-const valueFor = (items, types) => Number(items?.find((item) => types.includes(item.action_type))?.value || 0);
+const valueFor = (items, types) => Number(items?.filter((item) => types.some((type) => item.action_type.toLowerCase().includes(type))).reduce((sum, item) => sum + Number(item.value || 0), 0) || 0);
 const purchaseTypes = ["offsite_conversion.fb_pixel_purchase", "omni_purchase", "purchase"];
-const campaigns = (body.data || []).map((row) => ({
-  id: row.campaign_id,
-  name: row.campaign_name,
-  spend: Number(row.spend || 0),
-  impressions: Number(row.impressions || 0),
-  reach: Number(row.reach || 0),
-  clicks: Number(row.clicks || 0),
-  purchases: valueFor(row.actions, purchaseTypes),
-  revenue: valueFor(row.action_values, purchaseTypes),
-}));
+const campaigns = (body.data || []).map((row) => {
+  const name = row.campaign_name;
+  const lower = name.toLowerCase();
+  const kind = /event\s*(response|resp)|eventresp|event_resp/.test(lower) ? "event" : /post\s*eng|post_eng|engagement/.test(lower) ? "engagement" : "conversion";
+  return {
+    id: row.campaign_id, name, kind,
+    spend: Number(row.spend || 0), impressions: Number(row.impressions || 0), reach: Number(row.reach || 0), clicks: Number(row.clicks || 0),
+    purchases: valueFor(row.actions, purchaseTypes), revenue: valueFor(row.action_values, purchaseTypes),
+    eventResponses: valueFor(row.actions, ["event_response", "event response", "rsvp"]),
+    interactions: valueFor(row.actions, ["post_engagement", "post engagement", "page_engagement"]),
+  };
+});
 const totals = campaigns.reduce((sum, campaign) => ({
   spend: sum.spend + campaign.spend,
   revenue: sum.revenue + campaign.revenue,
