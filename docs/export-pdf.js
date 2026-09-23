@@ -23,32 +23,26 @@ root.buildTourPDF=async function(data,logoBytes){
  newPage();text('THE CAMPAIGN, IN FOCUS',L,y,8,bold,red);y+=21;
  for(const t of wrap(data.tour,CW,34,bold)){text(t,L,y,34,bold);y+=39;}y+=6;
  para('Meta: '+data.dateRange+' | '+data.campaigns.length+' matched campaigns | Currency: AUD',8);
- para('Meta refreshed: '+data.refreshed+' | Audience Republic imported: '+data.imported,8);y+=18;
-
- if(data.summary && data.summary.trim()){
-  ensure(50);
-  text('CAMPAIGN SUMMARY',L,y,8,bold,red);y+=14;
-  const paragraphs=data.summary.trim().split('\n');
-  for(const p of paragraphs){
-   if(p.trim()){
-    const lines=wrap(p.trim(),CW,9,regular);
-    for(const lineText of lines){
-     ensure(14);
-     text(lineText,L,y,9,regular,ink);
-     y+=13;
-    }
-    y+=4;
-   }
-  }
-  y+=10;
- }
-
+ para('Meta refreshed: '+data.refreshed+' | Audience Republic imported: '+data.imported,8);y+=12;
+ if(String(data.summary||'').trim()){
+  const lines=wrap(data.summary,CW-28,9),height=35+lines.length*13;ensure(height+12);rect(L,y,CW,height,pale);rect(L,y,3,height,red);text('CAMPAIGN SUMMARY',L+14,y+12,8,bold,gray);let sy=y+28;for(const lineText of lines){text(lineText,L+14,sy,9,regular,ink);sy+=13;}y+=height+16;
+ } else y+=6;
  const spend=sum(data.campaigns,'spend'),value=sum(data.campaigns,'revenue');
  ensure(110);const widths=[215,150,CW-365],metrics=[['PURCHASE VALUE',data.metaOK?cash(value):'-','Meta-attributed revenue'],['TOTAL AD SPEND',data.metaOK?cash(spend):'-','All matched objectives'],['BLENDED ROAS',data.metaOK?ratio(value,spend):'-','Value / total ad spend']];let mx=L;
  metrics.forEach((m,i)=>{rect(mx,y,widths[i],98,i===0?ink:pale);rect(mx,y,widths[i],3,red);text(m[0],mx+14,y+17,8,bold,i===0?white:gray);let size=i===0?29:24;while(bold.widthOfTextAtSize(m[1],size)>widths[i]-28)size--;text(m[1],mx+14,y+36,size,bold,i===0?white:ink);text(m[2],mx+14,y+77,7,regular,i===0?white:gray);mx+=widths[i];});y+=114;
  const emails=data.messages.filter(m=>m.type==='Email'),sms=data.messages.filter(m=>m.type==='SMS');
  [emails,sms].forEach((rows,i)=>{const x=L+i*(CW+12)/2,w=(CW-12)/2;rect(x,y,w,88,pale);text(i?'SMS AUDIENCE':'EMAIL AUDIENCE',x+14,y+12,8,bold,gray);text(data.audienceOK?num(sum(rows,'recipients')):'-',x+14,y+28,26,bold);text('Recipients across '+rows.length+' sends',x+14,y+60,8,regular,gray);});y+=98;
- section('01','Meta campaign performance');
+ const trackr=data.trackr||null;
+ section('01','Ticket sales performance');
+ if(!trackr)para('No Trackr sales snapshot is linked to this tour yet.');
+ else{
+  ensure(68);const ticketMetrics=[['TOTAL SOLD',num(trackr.totalSold)],['24H SALES',(Number(trackr.sales24h)>0?'+':'')+num(trackr.sales24h)],['TICKET REVENUE',cash(trackr.revenue)],['CAPACITY',trackr.capacityPct==null?'-':Number(trackr.capacityPct).toFixed(1)+'%'],['FORECAST',trackr.forecastPct==null?'-':Number(trackr.forecastPct).toFixed(1)+'%']];let tx=L,tw=CW/ticketMetrics.length;ticketMetrics.forEach(m=>{rect(tx,y,tw,52,pale);text(m[0],tx+8,y+9,7,bold,gray);let size=18;while(bold.widthOfTextAtSize(m[1],size)>tw-16)size--;text(m[1],tx+8,y+23,size,bold);tx+=tw;});y+=66;
+  const showRows=Array.isArray(trackr.shows)?trackr.shows:[];
+  if(showRows.length)table(['SHOW','SOLD','24H','CAPACITY','FORECAST','REQ. / DAY','REMAINING','REVENUE'],showRows.map(s=>[(s.venue||'Venue')+(s.city?' | '+s.city:'')+(s.date?' | '+s.date:''),num(s.sold),(Number(s.sales24h)>0?'+':'')+num(s.sales24h),s.capacityPct==null?'-':Number(s.capacityPct).toFixed(1)+'%',s.forecastPct==null?'-':Number(s.forecastPct).toFixed(1)+'%',s.requiredPerDay==null?'-':num(s.requiredPerDay)+'/day',num(s.ticketsRemaining),cash(s.revenue)]),[CW-280,38,38,47,47,58,48,52]);
+  else para('Trackr supplied no show-by-show detail in the latest snapshot.');
+  para('Trackr snapshot: '+(trackr.updatedAt?new Date(trackr.updatedAt).toLocaleString('en-AU'):'Date unavailable')+'. Ticket sales are sourced from the public Trackr tour page.',8);
+ }
+ section('02','Meta campaign performance');
  if(!data.metaOK)para('Meta data unavailable.');else if(!data.campaigns.length)para('No matching Meta campaigns in this snapshot.');
  for(const type of ['conversion','event','engagement']){const rows=data.campaigns.filter(c=>c.kind===type);if(!rows.length)continue;ensure(95);text(type==='conversion'?'Conversion campaigns':type==='event'?'Event response campaigns':'Post engagement campaigns',L,y,10,bold);y+=20;
   if(type==='conversion')table(['CAMPAIGN','SPEND','VALUE','ROAS','PURCHASES'],rows.map(c=>[c.name,cash(c.spend),cash(c.revenue),ratio(c.revenue,c.spend),num(c.purchases)]),[CW-275,70,85,55,65]);
@@ -56,9 +50,9 @@ root.buildTourPDF=async function(data,logoBytes){
   else table(['CAMPAIGN','REACH','INTERACTIONS'],rows.map(c=>[c.name,num(c.reach),num(c.interactions)]),[CW-200,90,110]);
  }
  const date=v=>v&&!isNaN(Date.parse(v))?new Date(v).toLocaleDateString('en-AU',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}):'Date unavailable';
- for(const [rows,type,no] of [[emails,'Email','02'],[sms,'SMS','03']]){if(type==='SMS'&&!rows.length)ensure(220);section(no,type+' communications');para(rows.length+' sends | '+num(sum(rows,'recipients'))+' recipients across sends'+(type==='Email'?' | '+num(sum(rows,'opens'))+' opens':'')+' | '+num(sum(rows,'clicks'))+' clicks');y+=7;
+ for(const [rows,type,no] of [[emails,'Email','03'],[sms,'SMS','04']]){if(type==='SMS'&&!rows.length)ensure(220);section(no,type+' communications');para(rows.length+' sends | '+num(sum(rows,'recipients'))+' recipients across sends'+(type==='Email'?' | '+num(sum(rows,'opens'))+' opens':'')+' | '+num(sum(rows,'clicks'))+' clicks');y+=7;
  if(!data.audienceOK)para('Audience Republic data unavailable.');else if(!rows.length)para('No matched '+type+' sends in the imported export.');else table(type==='Email'?['SEND / DATE (UTC)','RECIPIENTS','OPENS','CLICKS']:['SEND / DATE (UTC)','RECIPIENTS','CLICKS'],[...rows].sort((a,b)=>String(b.sentAt).localeCompare(String(a.sentAt))).map(m=>[m.name+' | '+date(m.sentAt)+(type==='Email'&&m.subject?' | '+m.subject:''),num(m.recipients),...(type==='Email'?[num(m.opens),num(m.clicks)]:[num(m.clicks)])]),type==='Email'?[CW-210,80,65,65]:[CW-170,90,80]);}
- const note='Only campaigns and sends matched to '+data.tour+' are included. Recipient totals are across sends, not unique people or confirmed deliveries. Meta and imported communications may cover different periods. Meta purchase value is attributed revenue, not verified ticket sales or profit. Blended ROAS uses all matched spend; conversion ROAS uses each campaign\'s spend. A dash means unavailable data or no spend for a ratio.';
+ const note='Only campaigns, sends and ticket sales matched to '+data.tour+' are included. Recipient totals are across sends, not unique people or confirmed deliveries. Meta, communications and Trackr may cover different periods. Meta purchase value is attributed revenue, not verified ticket sales or profit. Blended ROAS uses all matched spend; conversion ROAS uses each campaign\'s spend. Ticket sales data comes from the linked public Trackr page. A dash means unavailable data or no spend for a ratio.';
  ensure(46+wrap(note,CW,8).length*13);y+=14;rule(y);y+=15;text('READING THIS REPORT',L,y,8,bold);y+=17;para(note,8);
  const pages=doc.getPages();pages.forEach((p,i)=>{page=p;rule(H-43);text('TEAMWRK TOURING | '+clean(data.tour).slice(0,65),L,H-32,7,regular,gray);text((i+1)+' / '+pages.length,R-32,H-32,7,regular,gray);});
  doc.setTitle(data.tour+' - Campaign report');doc.setAuthor('Teamwrk Touring');return doc.save();
