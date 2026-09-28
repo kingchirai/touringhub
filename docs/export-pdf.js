@@ -9,7 +9,7 @@ root.buildTourPDF=async function(data,logoBytes){
  const cash=v=>v==null?'-':'$'+Math.round(v).toLocaleString('en-AU'),num=v=>v==null?'-':Math.round(v).toLocaleString('en-AU'),sum=(a,k)=>a.reduce((s,r)=>s+(Number(r[k])||0),0),ratio=(v,s)=>s>0?(v/s).toFixed(2)+'x':'-';
  const text=(s,x,top,size=10,font=regular,color=ink)=>page.drawText(clean(s),{x,y:H-top-size,size,font,color});
  const rect=(x,top,width,height,color)=>page.drawRectangle({x,y:H-top-height,width,height,color});
- const round=(x,top,width,height,r,color,border)=>page.drawRoundedRectangle({x,y:H-top-height,width,height,borderRadius:r,color,borderColor:border,borderWidth:border?.3:0});
+ const round=(x,top,width,height,r,color,border)=>page.drawRectangle({x,y:H-top-height,width,height,color,borderColor:border,borderWidth:border?.3:0});
  const rule=top=>page.drawLine({start:{x:L,y:H-top},end:{x:R,y:H-top},color:line,thickness:.6});
  function wrap(s,width,size=9,font=regular){let out=[],current='';for(const word of clean(s).split(/\s+/)){if(font.widthOfTextAtSize((current?current+' ':'')+word,size)<=width){current+=(current?' ':'')+word;}else{if(current)out.push(current);current='';for(const ch of word){if(font.widthOfTextAtSize(current+ch,size)>width){out.push(current);current='';}current+=ch;}}}if(current)out.push(current);return out.length?out:[''];}
  function newPage(){page=doc.addPage([W,H]);count++;rect(0,0,W,H,paper);rect(0,0,W,8,red);const lw=154,lh=lw*logo.height/logo.width;page.drawImage(logo,{x:L,y:H-30-lh,width:lw,height:lh});text('TEAMWRK TOURING',R-124,28,7,bold,red);text('CAMPAIGN PERFORMANCE REPORT',R-124,40,7,bold,slate);text(data.generated,R-124,53,7,regular,gray);rule(82);y=103;}
