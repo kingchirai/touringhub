@@ -33,6 +33,8 @@ root.buildTourPDF=async function(data,logoBytes){
  metrics.forEach((m,i)=>{round(mx,y,widths[i],98,3,i===0?ink:white,line);rect(mx,y,widths[i],4,i===0?red:gold);text(m[0],mx+14,y+18,7.4,bold,i===0?white:gray);let size=i===0?29:24;while(bold.widthOfTextAtSize(m[1],size)>widths[i]-28)size--;text(m[1],mx+14,y+37,size,bold,i===0?white:ink);text(m[2],mx+14,y+77,7,regular,i===0?white:gray);mx+=widths[i];});y+=115;
  const emails=data.messages.filter(m=>m.type==='Email'),sms=data.messages.filter(m=>m.type==='SMS');
  [emails,sms].forEach((rows,i)=>{const x=L+i*(CW+12)/2,w=(CW-12)/2;round(x,y,w,88,3,white,line);rect(x,y,4,88,i?slate:red);text(i?'SMS AUDIENCE':'EMAIL AUDIENCE',x+15,y+13,7.4,bold,gray);text(data.audienceOK?num(sum(rows,'recipients')):'-',x+15,y+30,26,bold);text('Recipients across '+rows.length+' sends',x+15,y+61,8,regular,gray);});y+=100;
+ const reportImages=Array.isArray(data.images)?data.images:[];
+ for(let i=0;i<reportImages.length;i+=2){const boxW=(CW-12)/2,boxH=132;ensure(boxH+12);for(let j=0;j<2&&i+j<reportImages.length;j++){const x=L+j*(boxW+12);round(x,y,boxW,boxH,3,white,line);try{const image=await doc.embedJpg(await fetch(reportImages[i+j]).then(r=>r.arrayBuffer())),scale=Math.min((boxW-12)/image.width,(boxH-12)/image.height),w=image.width*scale,h=image.height*scale;page.drawImage(image,{x:x+(boxW-w)/2,y:H-y-(boxH-h)/2-h,width:w,height:h});}catch(e){text('Photo unavailable',x+12,y+boxH/2-4,8,regular,gray);}}y+=boxH+12;}
  const trackr=data.trackr||null;
  section('01','Ticket sales performance');
  if(!trackr)para('No Trackr sales snapshot is linked to this tour yet.');
