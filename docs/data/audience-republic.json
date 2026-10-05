@@ -1,6 +1,17 @@
 {
-  "importedAt": "2026-10-05T01:31:03.126Z",
+  "importedAt": "2026-10-05T01:46:28.739Z",
   "messages": [
+    {
+      "tour": "The Black Seeds",
+      "type": "Email",
+      "sentAt": "2026-10-05T01:00:00.036Z",
+      "name": "The Black Seeds - Ticket Push",
+      "subject": "The Black Seeds are coming to Australia 🇦🇺",
+      "recipients": 12714,
+      "opens": 581,
+      "clicks": 11,
+      "revenue": 0
+    },
     {
       "tour": "Talib Kweli",
       "type": "Email",
@@ -8,7 +19,7 @@
       "name": "Talib Kweli - Next Month",
       "subject": "Talib Kweli live in Australia next month 🇦🇺",
       "recipients": 33732,
-      "opens": 3553,
+      "opens": 3554,
       "clicks": 21,
       "revenue": 0
     },
@@ -764,22 +775,22 @@
       "tour": "28 Days",
       "type": "Email",
       "sentAt": "2026-07-08T00:00:00.050Z",
-      "name": "28 Days - Presale - Cairns",
-      "subject": "Presale Tickets: 28 Days live in CAIRNS",
-      "recipients": 14,
-      "opens": 10,
-      "clicks": 9,
+      "name": "28 Days - Presale - Frankston",
+      "subject": "Presale Tickets: 28 Days live in FRANKSTON",
+      "recipients": 124,
+      "opens": 76,
+      "clicks": 55,
       "revenue": 0
     },
     {
       "tour": "28 Days",
       "type": "Email",
       "sentAt": "2026-07-08T00:00:00.050Z",
-      "name": "28 Days - Presale - Frankston",
-      "subject": "Presale Tickets: 28 Days live in FRANKSTON",
-      "recipients": 124,
-      "opens": 76,
-      "clicks": 55,
+      "name": "28 Days - Presale - Cairns",
+      "subject": "Presale Tickets: 28 Days live in CAIRNS",
+      "recipients": 14,
+      "opens": 10,
+      "clicks": 9,
       "revenue": 0
     },
     {
