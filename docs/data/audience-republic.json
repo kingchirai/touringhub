@@ -1,6 +1,83 @@
 {
-  "importedAt": "2026-10-21T01:01:53.030Z",
+  "importedAt": "2026-11-11T07:21:43.387Z",
   "messages": [
+    {
+      "tour": "Eric Hutchinson",
+      "type": "Email",
+      "sentAt": "2026-11-09T07:00:00.089Z",
+      "name": "Eric Hutchinson - This Month",
+      "subject": "Eric Hutchinson Australian tour with Marshall Hamburger!",
+      "recipients": 50243,
+      "opens": 6034,
+      "clicks": 43,
+      "revenue": 0
+    },
+    {
+      "tour": "Will Sparks",
+      "type": "Email",
+      "sentAt": "2026-11-06T07:00:00.048Z",
+      "name": "Will Sparks - 2027 Classics - Informational Update",
+      "subject": "The Will Sparks classics tour is happening - 3 hour mega set ⚡",
+      "recipients": 51467,
+      "opens": 4598,
+      "clicks": 120,
+      "revenue": 0
+    },
+    {
+      "tour": "Less Than Jake",
+      "type": "Email",
+      "sentAt": "2026-10-30T07:30:00.040Z",
+      "name": "Less Than Jake - EDM - Public Holiday Eve",
+      "subject": "Less Than Jake + The Aquabats live in Australia next week 🇦🇺",
+      "recipients": 55394,
+      "opens": 7275,
+      "clicks": 101,
+      "revenue": 0
+    },
+    {
+      "tour": "OneFour",
+      "type": "Email",
+      "sentAt": "2026-10-29T01:30:00.041Z",
+      "name": "OneFour - Regional Tour",
+      "subject": "OneFour Regional Tour is coming to you! ",
+      "recipients": 17737,
+      "opens": 1963,
+      "clicks": 28,
+      "revenue": 0
+    },
+    {
+      "tour": "Less Than Jake",
+      "type": "Email",
+      "sentAt": "2026-10-26T07:38:46.362Z",
+      "name": "Less Than Jake - EDM - Halloween Offer",
+      "subject": "🎃 Your exclusive $66.60 Less Than Jake offer - limited tickets, share with a mate!",
+      "recipients": 38174,
+      "opens": 5819,
+      "clicks": 185,
+      "revenue": 0
+    },
+    {
+      "tour": "The Black Seeds",
+      "type": "Email",
+      "sentAt": "2026-10-22T05:00:00.128Z",
+      "name": "The Black Seeds - Supports Announced",
+      "subject": "The Black Seeds announce supports for Australian tour next month 🇦🇺",
+      "recipients": 12984,
+      "opens": 1310,
+      "clicks": 15,
+      "revenue": 0
+    },
+    {
+      "tour": "harrykirby",
+      "type": "Email",
+      "sentAt": "2026-10-21T07:30:00.042Z",
+      "name": "harrykirby - this week",
+      "subject": "harrykirby's Australian tour kicks off this week 🔥",
+      "recipients": 4113,
+      "opens": 622,
+      "clicks": 11,
+      "revenue": 0
+    },
     {
       "tour": "Will Sparks",
       "type": "Email",
@@ -8,8 +85,8 @@
       "name": "Will Sparks - 2027 Classics - Update",
       "subject": "The Will Sparks classics tour is happening - don't miss out ⚡",
       "recipients": 22830,
-      "opens": 4258,
-      "clicks": 155,
+      "opens": 4399,
+      "clicks": 164,
       "revenue": 0
     },
     {
@@ -19,8 +96,8 @@
       "name": "Eric Hutchinson - Next Month",
       "subject": "Eric Hutchinson + Marshall Hamburger Australian tour kicks off next month!",
       "recipients": 29303,
-      "opens": 6503,
-      "clicks": 37,
+      "opens": 6713,
+      "clicks": 39,
       "revenue": 0
     },
     {
@@ -41,8 +118,8 @@
       "name": "You Am I - This Month",
       "subject": "You Am I 'Strung Up' Live this month!",
       "recipients": 19225,
-      "opens": 3928,
-      "clicks": 138,
+      "opens": 4025,
+      "clicks": 143,
       "revenue": 0
     },
     {
@@ -52,8 +129,8 @@
       "name": "Less Than Jake - EDM",
       "subject": "Less Than Jake's Australian Tour kicks off in less than a month! 🇦🇺",
       "recipients": 38280,
-      "opens": 5665,
-      "clicks": 88,
+      "opens": 5745,
+      "clicks": 89,
       "revenue": 0
     },
     {
@@ -63,7 +140,7 @@
       "name": "harrykirby - supports announced",
       "subject": "harrykirby announces supports for Australian Tour 🔥",
       "recipients": 4127,
-      "opens": 524,
+      "opens": 531,
       "clicks": 3,
       "revenue": 0
     },
@@ -74,8 +151,8 @@
       "name": "harrykirby - MKTO email",
       "subject": "harrykirby Australian tour 🔥",
       "recipients": 3440,
-      "opens": 343,
-      "clicks": 9,
+      "opens": 350,
+      "clicks": 10,
       "revenue": 0
     },
     {
@@ -85,7 +162,7 @@
       "name": "The Black Seeds - Ticket Push",
       "subject": "The Black Seeds are coming to Australia 🇦🇺",
       "recipients": 12714,
-      "opens": 1699,
+      "opens": 1713,
       "clicks": 15,
       "revenue": 0
     },
@@ -96,7 +173,7 @@
       "name": "Talib Kweli - Next Month",
       "subject": "Talib Kweli live in Australia next month 🇦🇺",
       "recipients": 33732,
-      "opens": 3806,
+      "opens": 3852,
       "clicks": 22,
       "revenue": 0
     },
@@ -107,7 +184,7 @@
       "name": "Will Sparks - Glass Island",
       "subject": "Glass Island: Will Sparks - Final Tickets on sale now!",
       "recipients": 540,
-      "opens": 99,
+      "opens": 101,
       "clicks": 9,
       "revenue": 0
     },
@@ -118,7 +195,7 @@
       "name": "28 Days - This Week!",
       "subject": "28 Days kick off 30th anniversary tour this week!",
       "recipients": 55800,
-      "opens": 6778,
+      "opens": 6836,
       "clicks": 75,
       "revenue": 0
     },
@@ -129,7 +206,7 @@
       "name": "Horrorshow - This Week",
       "subject": "Horrorshow Australian Tour begins this week w/ Brother Ali 🇦🇺",
       "recipients": 15208,
-      "opens": 2196,
+      "opens": 2201,
       "clicks": 15,
       "revenue": 0
     },
@@ -140,7 +217,7 @@
       "name": "Brother Ali - This Week",
       "subject": "Brother Ali Australian Tour begins this week w/ Horrorshow 🇦🇺",
       "recipients": 12592,
-      "opens": 1719,
+      "opens": 1723,
       "clicks": 6,
       "revenue": 0
     },
@@ -151,7 +228,7 @@
       "name": "harrykirby - tour announce - Genre",
       "subject": "harrykirby announces Australian tour 🔥",
       "recipients": 49405,
-      "opens": 5215,
+      "opens": 5238,
       "clicks": 58,
       "revenue": 0
     },
@@ -162,8 +239,8 @@
       "name": "harrykirby - tour announce - harry audience",
       "subject": "harrykirby announces Australian tour 🔥",
       "recipients": 3014,
-      "opens": 372,
-      "clicks": 21,
+      "opens": 374,
+      "clicks": 22,
       "revenue": 0
     },
     {
@@ -184,7 +261,7 @@
       "name": "Dan Does Footy - 87% SOLD",
       "subject": "Dan Does Footy Live at Margaret Court Arena! Grand Final Week!",
       "recipients": 8525,
-      "opens": 955,
+      "opens": 956,
       "clicks": 17,
       "revenue": 0
     },
@@ -195,7 +272,7 @@
       "name": "Will Sparks - 2027 Classics - Get Tickets",
       "subject": "Will Sparks classics tour is coming to you.. ⚡",
       "recipients": 22881,
-      "opens": 2299,
+      "opens": 2307,
       "clicks": 89,
       "revenue": 0
     },
@@ -206,7 +283,7 @@
       "name": "Horrorshow/Brother Ali - One Week",
       "subject": "Horrorshow and Brother Ali Australian Tour begins in one week! 🇦🇺",
       "recipients": 27749,
-      "opens": 2300,
+      "opens": 2307,
       "clicks": 18,
       "revenue": 0
     },
@@ -217,7 +294,7 @@
       "name": "Will Sparks - Bunker EDM - Classics",
       "subject": "Did you love Will Sparks? Secure your spot at his biggest show ever ⚡",
       "recipients": 988,
-      "opens": 115,
+      "opens": 116,
       "clicks": 5,
       "revenue": 0
     },
@@ -228,7 +305,7 @@
       "name": "Will Sparks - 2027 Classics - On Sale (TWT Database)",
       "subject": "Will Sparks Classics Tour 2027 is on sale now ⚡",
       "recipients": 197081,
-      "opens": 15942,
+      "opens": 15974,
       "clicks": 253,
       "revenue": 0
     },
@@ -250,8 +327,8 @@
       "name": "Will Sparks - 2027 Classics - Adelaide Presale Reminder",
       "subject": "Your Will Sparks 'Classics' Presale Tickets - Adelaide ⚡",
       "recipients": 1699,
-      "opens": 208,
-      "clicks": 35,
+      "opens": 209,
+      "clicks": 36,
       "revenue": 0
     },
     {
@@ -272,8 +349,8 @@
       "name": "Will Sparks Classics - Brisbane Presale",
       "subject": "",
       "recipients": 1324,
-      "opens": 366,
-      "clicks": 357,
+      "opens": 367,
+      "clicks": 358,
       "revenue": 0
     },
     {
@@ -294,7 +371,7 @@
       "name": "Will Sparks - 2027 Classics - Melbourne Presale Reminder",
       "subject": "Your Will Sparks 'Classics' Presale Tickets - Melbourne ⚡",
       "recipients": 4292,
-      "opens": 632,
+      "opens": 635,
       "clicks": 75,
       "revenue": 0
     },
@@ -316,8 +393,8 @@
       "name": "Will Sparks Classics - Adelaide Presale",
       "subject": "",
       "recipients": 1661,
-      "opens": 714,
-      "clicks": 712,
+      "opens": 715,
+      "clicks": 713,
       "revenue": 0
     },
     {
@@ -338,7 +415,7 @@
       "name": "Will Sparks - 2027 Classics - Adelaide Presale",
       "subject": "Presale: Will Sparks 'Classics' Tickets - Adelaide ⚡",
       "recipients": 1700,
-      "opens": 201,
+      "opens": 203,
       "clicks": 56,
       "revenue": 0
     },
@@ -371,8 +448,8 @@
       "name": "Less Than Jake - EDM",
       "subject": "Less Than Jake are bringing The Aquabats down under! 🇦🇺",
       "recipients": 38697,
-      "opens": 6517,
-      "clicks": 119,
+      "opens": 6530,
+      "clicks": 121,
       "revenue": 0
     },
     {
@@ -382,7 +459,7 @@
       "name": "Will Sparks - 2027 Classics - Announce (WS Database)",
       "subject": "Will Sparks 'Classics' tour is back and bigger than ever ⚡",
       "recipients": 18319,
-      "opens": 1096,
+      "opens": 1099,
       "clicks": 77,
       "revenue": 0
     },
@@ -393,7 +470,7 @@
       "name": "Will Sparks - 2027 Classics - Announce (TWT Database)",
       "subject": "Will Sparks Classics Tour 2027 ⚡",
       "recipients": 186709,
-      "opens": 13872,
+      "opens": 13897,
       "clicks": 297,
       "revenue": 0
     },
@@ -404,7 +481,7 @@
       "name": "Will Sparks - 2027 Classics - Announce (WS Database)",
       "subject": "Will Sparks 'Classics' tour is back and bigger than ever... ⚡",
       "recipients": 19135,
-      "opens": 1292,
+      "opens": 1294,
       "clicks": 86,
       "revenue": 0
     },
@@ -415,7 +492,7 @@
       "name": "Dan Does Footy - 70% SOLD",
       "subject": "Dan Does Footy is selling out! Live at Margaret Court Arena! Grand Final Week!",
       "recipients": 8700,
-      "opens": 629,
+      "opens": 630,
       "clicks": 9,
       "revenue": 0
     },
@@ -426,7 +503,7 @@
       "name": "Talib Kweli - On Sale Now",
       "subject": "Talib Kweli Australian tickets are on sale now 🇦🇺",
       "recipients": 34825,
-      "opens": 2591,
+      "opens": 2594,
       "clicks": 111,
       "revenue": 0
     },
@@ -481,7 +558,7 @@
       "name": "Talib Kweli - Announce",
       "subject": "Talib Kweli announces Australian Tour 🇦🇺",
       "recipients": 34665,
-      "opens": 1803,
+      "opens": 1806,
       "clicks": 52,
       "revenue": 0
     },
@@ -492,7 +569,7 @@
       "name": "The Black Seeds - ON SALE NOW",
       "subject": "The Black Seeds Australian Tour is on sale now! 🇦🇺",
       "recipients": 12554,
-      "opens": 1089,
+      "opens": 1091,
       "clicks": 33,
       "revenue": 0
     },
@@ -533,22 +610,22 @@
       "tour": "The Black Seeds",
       "type": "Email",
       "sentAt": "2026-08-06T00:00:00.071Z",
-      "name": "Presale: The Black Seeds - Gold Coast",
-      "subject": "The Black Seeds Presale Tickets - Gold Coast!",
-      "recipients": 13,
-      "opens": 3,
-      "clicks": 3,
+      "name": "Presale: The Black Seeds - Brisbane",
+      "subject": "The Black Seeds Presale Tickets - Brisbane!",
+      "recipients": 273,
+      "opens": 57,
+      "clicks": 6,
       "revenue": 0
     },
     {
       "tour": "The Black Seeds",
       "type": "Email",
       "sentAt": "2026-08-06T00:00:00.071Z",
-      "name": "Presale: The Black Seeds - Brisbane",
-      "subject": "The Black Seeds Presale Tickets - Brisbane!",
-      "recipients": 273,
-      "opens": 57,
-      "clicks": 6,
+      "name": "Presale: The Black Seeds - Gold Coast",
+      "subject": "The Black Seeds Presale Tickets - Gold Coast!",
+      "recipients": 13,
+      "opens": 3,
+      "clicks": 3,
       "revenue": 0
     },
     {
@@ -624,7 +701,7 @@
       "name": "Clutch - Selling Fast",
       "subject": "Selling Fast: Clutch 2027 Australian Tour w/ Corrosion of Conformity 🔥",
       "recipients": 39642,
-      "opens": 5229,
+      "opens": 5236,
       "clicks": 94,
       "revenue": 0
     },
@@ -635,7 +712,7 @@
       "name": "MKTO - Support Announce",
       "subject": "harrykirby joins MKTO on Australian Tour 🔥",
       "recipients": 51562,
-      "opens": 4955,
+      "opens": 4958,
       "clicks": 76,
       "revenue": 0
     },
@@ -646,7 +723,7 @@
       "name": "harrykirby EP - out now",
       "subject": "Australia's next breakout star? harrykirby releases debut EP",
       "recipients": 51308,
-      "opens": 11987,
+      "opens": 11989,
       "clicks": 85,
       "revenue": 0
     },
@@ -657,7 +734,7 @@
       "name": "Clutch - GP On Sale",
       "subject": "On Sale: Clutch 2027 Australian Tour with Corrosion of Conformity 🔥",
       "recipients": 84359,
-      "opens": 9064,
+      "opens": 9070,
       "clicks": 206,
       "revenue": 0
     },
@@ -687,22 +764,22 @@
       "tour": "Clutch",
       "type": "Email",
       "sentAt": "2026-07-22T00:00:00.044Z",
-      "name": "Clutch - Presale - Brisbane",
-      "subject": "Presale Tickets: Clutch live in BRISBANE",
-      "recipients": 187,
-      "opens": 107,
-      "clicks": 88,
+      "name": "Clutch - Presale - Sydney",
+      "subject": "Presale Tickets: Clutch live in SYDNEY",
+      "recipients": 222,
+      "opens": 136,
+      "clicks": 109,
       "revenue": 0
     },
     {
       "tour": "Clutch",
       "type": "Email",
       "sentAt": "2026-07-22T00:00:00.044Z",
-      "name": "Clutch - Presale - Sydney",
-      "subject": "Presale Tickets: Clutch live in SYDNEY",
-      "recipients": 222,
-      "opens": 136,
-      "clicks": 109,
+      "name": "Clutch - Presale - Brisbane",
+      "subject": "Presale Tickets: Clutch live in BRISBANE",
+      "recipients": 187,
+      "opens": 107,
+      "clicks": 88,
       "revenue": 0
     },
     {
@@ -723,7 +800,7 @@
       "name": "Clutch - Tour Announce",
       "subject": "Clutch Announce 2027 Australian Tour with Corrosion of Conformity 🔥",
       "recipients": 83229,
-      "opens": 9622,
+      "opens": 9626,
       "clicks": 343,
       "revenue": 0
     },
@@ -734,7 +811,7 @@
       "name": "Less Than Jake - EDM",
       "subject": "Ska Punk Legends Less Than Jake Return Down Under!",
       "recipients": 22378,
-      "opens": 2962,
+      "opens": 2965,
       "clicks": 109,
       "revenue": 0
     },
@@ -756,8 +833,8 @@
       "name": "VSPY VSPY - On Sale Now",
       "subject": "VSPY VSPY 40th Anniversary Tour - Less Than 100 Tix!",
       "recipients": 17548,
-      "opens": 3592,
-      "clicks": 74,
+      "opens": 3596,
+      "clicks": 75,
       "revenue": 0
     },
     {
@@ -778,7 +855,7 @@
       "name": "Eric Hutch - On Sale Update",
       "subject": "Eric Hutchinson + Marshall Hamburger Australian Tour! Don't miss out!",
       "recipients": 29343,
-      "opens": 3257,
+      "opens": 3259,
       "clicks": 38,
       "revenue": 0
     },
@@ -789,7 +866,7 @@
       "name": "VSPY VSPY - On Sale Now",
       "subject": "On Sale: VSPY VSPY 40th Anniversary Tour!",
       "recipients": 18286,
-      "opens": 3791,
+      "opens": 3795,
       "clicks": 88,
       "revenue": 0
     },
@@ -822,7 +899,7 @@
       "name": "Brother Ali - On Sale",
       "subject": "Brother Ali w/ Horrorshow in Australia!",
       "recipients": 26662,
-      "opens": 6865,
+      "opens": 6866,
       "clicks": 22,
       "revenue": 0
     },
@@ -874,17 +951,6 @@
       "tour": "28 Days",
       "type": "Email",
       "sentAt": "2026-07-08T00:00:00.049Z",
-      "name": "28 Days - Presale - Townsville",
-      "subject": "Presale Tickets: 28 Days live in TOWNSVILLE",
-      "recipients": 16,
-      "opens": 15,
-      "clicks": 7,
-      "revenue": 0
-    },
-    {
-      "tour": "28 Days",
-      "type": "Email",
-      "sentAt": "2026-07-08T00:00:00.049Z",
       "name": "28 Days - Presale - Forth",
       "subject": "Presale Tickets: 28 Days live in FORTH",
       "recipients": 263,
@@ -901,6 +967,17 @@
       "recipients": 7,
       "opens": 4,
       "clicks": 4,
+      "revenue": 0
+    },
+    {
+      "tour": "28 Days",
+      "type": "Email",
+      "sentAt": "2026-07-08T00:00:00.049Z",
+      "name": "28 Days - Presale - Townsville",
+      "subject": "Presale Tickets: 28 Days live in TOWNSVILLE",
+      "recipients": 16,
+      "opens": 15,
+      "clicks": 7,
       "revenue": 0
     },
     {
@@ -1009,7 +1086,7 @@
       "name": "Brother Ali - Pre-Reg",
       "subject": "Brother Ali announces AUS tour w/ Horrorshow!",
       "recipients": 26648,
-      "opens": 6249,
+      "opens": 6250,
       "clicks": 19,
       "revenue": 0
     },
@@ -1020,7 +1097,7 @@
       "name": "28 Days - Pre-Reg",
       "subject": "28 Days Announce More Dates! 30th Anniversary Tour!",
       "recipients": 54073,
-      "opens": 10451,
+      "opens": 10454,
       "clicks": 82,
       "revenue": 0
     },
@@ -1031,7 +1108,7 @@
       "name": "Shapeshifter - update",
       "subject": "Shapeshifter are coming to Australia 🔥",
       "recipients": 23033,
-      "opens": 1837,
+      "opens": 1839,
       "clicks": 33,
       "revenue": 0
     },
@@ -1042,7 +1119,7 @@
       "name": "Eric Hutch - On Sale!",
       "subject": "Eric Hutchinson Australian Tour w/ Marshall Hamburger!",
       "recipients": 29491,
-      "opens": 3628,
+      "opens": 3631,
       "clicks": 43,
       "revenue": 0
     },
@@ -1064,7 +1141,7 @@
       "name": "Eric Hutch - Pre-Reg",
       "subject": "Eric Hutchinson Australian Tour! Register for Presale",
       "recipients": 47927,
-      "opens": 7078,
+      "opens": 7080,
       "clicks": 38,
       "revenue": 0
     },
@@ -1097,7 +1174,7 @@
       "name": "You Am I - ON SALE",
       "subject": "On Sale Now: You Am I 'Strung Up' Live",
       "recipients": 17610,
-      "opens": 3277,
+      "opens": 3279,
       "clicks": 116,
       "revenue": 0
     },
@@ -1108,8 +1185,8 @@
       "name": "You Am I - Melbourne Recital Hall",
       "subject": "Your Presale Tickets: You Am I live at Melbourne Recital Centre",
       "recipients": 1718,
-      "opens": 538,
-      "clicks": 53,
+      "opens": 543,
+      "clicks": 55,
       "revenue": 0
     },
     {
@@ -1141,7 +1218,7 @@
       "name": "You Am I - Melbourne Recital Hall",
       "subject": "Presale Tickets: You Am I live at Melbourne Recital Centre",
       "recipients": 1736,
-      "opens": 471,
+      "opens": 473,
       "clicks": 54,
       "revenue": 0
     },
@@ -1174,8 +1251,8 @@
       "name": "You Am I Announce",
       "subject": "You Am I are celebrating 'Hourly, Daily' with a String Quartet LIVE! 🎻",
       "recipients": 41503,
-      "opens": 7117,
-      "clicks": 386,
+      "opens": 7121,
+      "clicks": 387,
       "revenue": 0
     },
     {
@@ -1185,7 +1262,7 @@
       "name": "Shapeshifter - On Sale Now",
       "subject": "Shapeshifter Australian Tour - 20 Years of Soulstice 🔥",
       "recipients": 22321,
-      "opens": 2034,
+      "opens": 2035,
       "clicks": 48,
       "revenue": 0
     },
@@ -1197,7 +1274,7 @@
       "subject": "",
       "recipients": 685,
       "opens": 227,
-      "clicks": 210,
+      "clicks": 209,
       "revenue": 7750.3
     },
     {
@@ -1226,17 +1303,6 @@
       "tour": "Shapeshifter",
       "type": "Email",
       "sentAt": "2026-06-23T00:00:00.046Z",
-      "name": "Shapeshifter - Sydney Presale",
-      "subject": "Your Presale Tickets: Shapeshifter live in Sydney 🔥",
-      "recipients": 82,
-      "opens": 28,
-      "clicks": 16,
-      "revenue": 0
-    },
-    {
-      "tour": "Shapeshifter",
-      "type": "Email",
-      "sentAt": "2026-06-23T00:00:00.046Z",
       "name": "Shapeshifter - Brisbane Presale",
       "subject": "Your Presale Tickets: Shapeshifter live in Brisbane 🔥",
       "recipients": 94,
@@ -1247,11 +1313,22 @@
     {
       "tour": "Shapeshifter",
       "type": "Email",
+      "sentAt": "2026-06-23T00:00:00.046Z",
+      "name": "Shapeshifter - Sydney Presale",
+      "subject": "Your Presale Tickets: Shapeshifter live in Sydney 🔥",
+      "recipients": 82,
+      "opens": 28,
+      "clicks": 16,
+      "revenue": 0
+    },
+    {
+      "tour": "Shapeshifter",
+      "type": "Email",
       "sentAt": "2026-06-23T00:00:00.045Z",
       "name": "Shapeshifter - Melbourne Presale",
       "subject": "Your Presale Tickets: Shapeshifter live in Melbourne 🔥",
       "recipients": 892,
-      "opens": 85,
+      "opens": 86,
       "clicks": 34,
       "revenue": 2636.7
     },
@@ -1262,7 +1339,7 @@
       "name": "Shapeshifter - Ultra SYD GC",
       "subject": "Shapeshifter are coming to AUSTRALIA 🔥",
       "recipients": 28065,
-      "opens": 2591,
+      "opens": 2596,
       "clicks": 101,
       "revenue": 0
     },
@@ -1306,7 +1383,7 @@
       "name": "Less Than Jake - Update",
       "subject": "Win a SIGNED Fender Telecaster + Soundcheck Experience! Less Than Jake live in AUS/NZ!",
       "recipients": 22479,
-      "opens": 3004,
+      "opens": 3005,
       "clicks": 206,
       "revenue": 0
     },
@@ -1317,7 +1394,7 @@
       "name": "MKTO - GP On Sale",
       "subject": "MKTO AUS/NZ TOUR - Selling Fast 🔥",
       "recipients": 28654,
-      "opens": 2881,
+      "opens": 2882,
       "clicks": 208,
       "revenue": 0
     },
@@ -1361,7 +1438,7 @@
       "name": "Less Than Jake - Update",
       "subject": "Less Than Jake are coming to you, Australia! 🔥",
       "recipients": 4120,
-      "opens": 770,
+      "opens": 771,
       "clicks": 70,
       "revenue": 0
     },
@@ -1534,22 +1611,22 @@
       "tour": "MKTO",
       "type": "Email",
       "sentAt": "2026-05-19T23:00:00.071Z",
-      "name": "MKTO - Perth Presale",
-      "subject": "Presale Tickets: MKTO live in Perth 🔥",
-      "recipients": 257,
-      "opens": 61,
-      "clicks": 32,
+      "name": "MKTO - Brisbane Presale",
+      "subject": "Your Presale Tickets: MKTO live in Brisbane 🔥",
+      "recipients": 384,
+      "opens": 111,
+      "clicks": 52,
       "revenue": 0
     },
     {
       "tour": "MKTO",
       "type": "Email",
       "sentAt": "2026-05-19T23:00:00.071Z",
-      "name": "MKTO - Brisbane Presale",
-      "subject": "Your Presale Tickets: MKTO live in Brisbane 🔥",
-      "recipients": 384,
-      "opens": 111,
-      "clicks": 52,
+      "name": "MKTO - Perth Presale",
+      "subject": "Presale Tickets: MKTO live in Perth 🔥",
+      "recipients": 257,
+      "opens": 61,
+      "clicks": 32,
       "revenue": 0
     },
     {
@@ -1636,7 +1713,7 @@
       "name": "Less Than Jake - GP On Sale",
       "subject": "Less Than Jake w/ The Aquabats! - AUS/NZ Tour On Sale Now 🔥",
       "recipients": 19773,
-      "opens": 2129,
+      "opens": 2133,
       "clicks": 168,
       "revenue": 0
     },
@@ -1765,22 +1842,22 @@
       "tour": "Less Than Jake",
       "type": "Email",
       "sentAt": "2026-04-13T23:00:00.052Z",
-      "name": "Less Than Jake - Brisbane Presale",
-      "subject": "Presale Tickets: Less Than Jake in BRISBANE 🔥",
-      "recipients": 262,
-      "opens": 74,
-      "clicks": 45,
+      "name": "Less Than Jake - Sydney Presale",
+      "subject": "Presale Tickets: Less Than Jake in SYDNEY 🔥",
+      "recipients": 551,
+      "opens": 172,
+      "clicks": 102,
       "revenue": 0
     },
     {
       "tour": "Less Than Jake",
       "type": "Email",
       "sentAt": "2026-04-13T23:00:00.052Z",
-      "name": "Less Than Jake - Sydney Presale",
-      "subject": "Presale Tickets: Less Than Jake in SYDNEY 🔥",
-      "recipients": 551,
-      "opens": 172,
-      "clicks": 102,
+      "name": "Less Than Jake - Brisbane Presale",
+      "subject": "Presale Tickets: Less Than Jake in BRISBANE 🔥",
+      "recipients": 262,
+      "opens": 74,
+      "clicks": 45,
       "revenue": 0
     },
     {
@@ -1834,7 +1911,7 @@
       "name": "28 Days - General Tickets Now Live National",
       "subject": "ON SALE NOW: 28 Days 30th Anniversary Australian Tour 🔥",
       "recipients": 35013,
-      "opens": 4791,
+      "opens": 4792,
       "clicks": 383,
       "revenue": 0
     },
@@ -1911,8 +1988,8 @@
       "name": "Will Sparks - Melb Presale - Ork",
       "subject": "",
       "recipients": 5935,
-      "opens": 1249,
-      "clicks": 1147,
+      "opens": 1250,
+      "clicks": 1148,
       "revenue": 0
     },
     {
